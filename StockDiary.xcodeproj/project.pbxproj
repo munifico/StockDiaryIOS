@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,9 +14,19 @@
 		484A3FB224DE7C5C00D3A34B /* StockDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 484A3FB024DE7C5C00D3A34B /* StockDiary.xcdatamodeld */; };
 		484A3FB424DE7C5D00D3A34B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484A3FB324DE7C5D00D3A34B /* Assets.xcassets */; };
 		484A3FB724DE7C5D00D3A34B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484A3FB524DE7C5D00D3A34B /* LaunchScreen.storyboard */; };
+		484A3FC024DE7D5E00D3A34B /* Trading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484A3FBF24DE7D5E00D3A34B /* Trading.storyboard */; };
+		484A3FC224DE7F0800D3A34B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A3FC124DE7F0800D3A34B /* MainTabBarController.swift */; };
+		484A3FC424DE7F3100D3A34B /* TradingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A3FC324DE7F3100D3A34B /* TradingViewController.swift */; };
+		484A3FC724DE833D00D3A34B /* Memo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484A3FC624DE833D00D3A34B /* Memo.storyboard */; };
+		484A3FC924DE83A400D3A34B /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A3FC824DE83A400D3A34B /* MemoViewController.swift */; };
+		484A3FCC24DE8ECC00D3A34B /* CustomTabBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A3FCB24DE8ECC00D3A34B /* CustomTabBarCell.swift */; };
+		4874263924DEDC4100427226 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4874263824DEDC4100427226 /* CustomTabBar.swift */; };
+		4882E5CA24DFE6E800D9C18E /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882E5C924DFE6E800D9C18E /* PageCell.swift */; };
+		DF9D0D7F12887A137DF3B8D5 /* Pods_StockDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73C85B3BF0CA52E3E93FD89 /* Pods_StockDiary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32FE1CD456C553D8BE273C1E /* Pods-StockDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockDiary.release.xcconfig"; path = "Target Support Files/Pods-StockDiary/Pods-StockDiary.release.xcconfig"; sourceTree = "<group>"; };
 		484A3FA424DE7C5C00D3A34B /* StockDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		484A3FA724DE7C5C00D3A34B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		484A3FA924DE7C5C00D3A34B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +36,16 @@
 		484A3FB324DE7C5D00D3A34B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		484A3FB624DE7C5D00D3A34B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		484A3FB824DE7C5D00D3A34B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		484A3FBF24DE7D5E00D3A34B /* Trading.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trading.storyboard; sourceTree = "<group>"; };
+		484A3FC124DE7F0800D3A34B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		484A3FC324DE7F3100D3A34B /* TradingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingViewController.swift; sourceTree = "<group>"; };
+		484A3FC624DE833D00D3A34B /* Memo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Memo.storyboard; sourceTree = "<group>"; };
+		484A3FC824DE83A400D3A34B /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		484A3FCB24DE8ECC00D3A34B /* CustomTabBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarCell.swift; sourceTree = "<group>"; };
+		4874263824DEDC4100427226 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		4882E5C924DFE6E800D9C18E /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		62DF0892334199EDFC11C4FC /* Pods-StockDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockDiary.debug.xcconfig"; path = "Target Support Files/Pods-StockDiary/Pods-StockDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		F73C85B3BF0CA52E3E93FD89 /* Pods_StockDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +53,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF9D0D7F12887A137DF3B8D5 /* Pods_StockDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		431DB55075274F3F533597E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62DF0892334199EDFC11C4FC /* Pods-StockDiary.debug.xcconfig */,
+				32FE1CD456C553D8BE273C1E /* Pods-StockDiary.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		484A3F9B24DE7C5C00D3A34B = {
 			isa = PBXGroup;
 			children = (
 				484A3FA624DE7C5C00D3A34B /* StockDiary */,
 				484A3FA524DE7C5C00D3A34B /* Products */,
+				431DB55075274F3F533597E4 /* Pods */,
+				9C59D88B4177FF08AF6E486D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +90,9 @@
 		484A3FA624DE7C5C00D3A34B /* StockDiary */ = {
 			isa = PBXGroup;
 			children = (
+				484A3FCA24DE8E6D00D3A34B /* CustomView */,
+				484A3FC524DE82C900D3A34B /* Memo */,
+				484A3FBE24DE7C9000D3A34B /* TradingRecord */,
 				484A3FA724DE7C5C00D3A34B /* AppDelegate.swift */,
 				484A3FA924DE7C5C00D3A34B /* SceneDelegate.swift */,
 				484A3FAB24DE7C5C00D3A34B /* ViewController.swift */,
@@ -66,8 +101,45 @@
 				484A3FB524DE7C5D00D3A34B /* LaunchScreen.storyboard */,
 				484A3FB824DE7C5D00D3A34B /* Info.plist */,
 				484A3FB024DE7C5C00D3A34B /* StockDiary.xcdatamodeld */,
+				484A3FC124DE7F0800D3A34B /* MainTabBarController.swift */,
 			);
 			path = StockDiary;
+			sourceTree = "<group>";
+		};
+		484A3FBE24DE7C9000D3A34B /* TradingRecord */ = {
+			isa = PBXGroup;
+			children = (
+				484A3FBF24DE7D5E00D3A34B /* Trading.storyboard */,
+				484A3FC324DE7F3100D3A34B /* TradingViewController.swift */,
+			);
+			path = TradingRecord;
+			sourceTree = "<group>";
+		};
+		484A3FC524DE82C900D3A34B /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				484A3FC624DE833D00D3A34B /* Memo.storyboard */,
+				484A3FC824DE83A400D3A34B /* MemoViewController.swift */,
+			);
+			path = Memo;
+			sourceTree = "<group>";
+		};
+		484A3FCA24DE8E6D00D3A34B /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				484A3FCB24DE8ECC00D3A34B /* CustomTabBarCell.swift */,
+				4874263824DEDC4100427226 /* CustomTabBar.swift */,
+				4882E5C924DFE6E800D9C18E /* PageCell.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		9C59D88B4177FF08AF6E486D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F73C85B3BF0CA52E3E93FD89 /* Pods_StockDiary.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 484A3FBB24DE7C5D00D3A34B /* Build configuration list for PBXNativeTarget "StockDiary" */;
 			buildPhases = (
+				3987FB7EEDFA1625446BDB3E /* [CP] Check Pods Manifest.lock */,
 				484A3FA024DE7C5C00D3A34B /* Sources */,
 				484A3FA124DE7C5C00D3A34B /* Frameworks */,
 				484A3FA224DE7C5C00D3A34B /* Resources */,
+				A1902F385113CF0BDB4E2011 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,19 +204,69 @@
 			files = (
 				484A3FB724DE7C5D00D3A34B /* LaunchScreen.storyboard in Resources */,
 				484A3FB424DE7C5D00D3A34B /* Assets.xcassets in Resources */,
+				484A3FC024DE7D5E00D3A34B /* Trading.storyboard in Resources */,
+				484A3FC724DE833D00D3A34B /* Memo.storyboard in Resources */,
 				484A3FAF24DE7C5C00D3A34B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3987FB7EEDFA1625446BDB3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StockDiary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1902F385113CF0BDB4E2011 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockDiary/Pods-StockDiary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockDiary/Pods-StockDiary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockDiary/Pods-StockDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		484A3FA024DE7C5C00D3A34B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484A3FCC24DE8ECC00D3A34B /* CustomTabBarCell.swift in Sources */,
+				484A3FC424DE7F3100D3A34B /* TradingViewController.swift in Sources */,
 				484A3FB224DE7C5C00D3A34B /* StockDiary.xcdatamodeld in Sources */,
 				484A3FAC24DE7C5C00D3A34B /* ViewController.swift in Sources */,
+				4874263924DEDC4100427226 /* CustomTabBar.swift in Sources */,
+				484A3FC224DE7F0800D3A34B /* MainTabBarController.swift in Sources */,
+				4882E5CA24DFE6E800D9C18E /* PageCell.swift in Sources */,
+				484A3FC924DE83A400D3A34B /* MemoViewController.swift in Sources */,
 				484A3FA824DE7C5C00D3A34B /* AppDelegate.swift in Sources */,
 				484A3FAA24DE7C5C00D3A34B /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +410,7 @@
 		};
 		484A3FBC24DE7C5D00D3A34B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62DF0892334199EDFC11C4FC /* Pods-StockDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +428,7 @@
 		};
 		484A3FBD24DE7C5D00D3A34B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32FE1CD456C553D8BE273C1E /* Pods-StockDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
