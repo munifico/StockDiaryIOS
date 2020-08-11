@@ -9,31 +9,47 @@
 import UIKit
 import SnapKit
 
-class TradingViewController: UIViewController, CustomMenuBarDelegate {
-   
+class TradingViewController: UIViewController, CustomMenuBarDelegate, PageControllerDelegate {
+
+    @IBOutlet weak var containerView: UIView!
+    
+    let pageController = PageController(coder: NSCoder())!
+    
     var customTabBar: CustomTabBar = {
         let customTabBar = CustomTabBar()
         return customTabBar
     }()
     
-    var pageCollectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 0
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(PageCell.self, forCellWithReuseIdentifier: "PageCell")
-        collectionView.isPagingEnabled = true
-        return collectionView
-    }()
+//    var pageCollectionView: UICollectionView = {
+//        let layout = UICollectionViewFlowLayout()
+//        layout.scrollDirection = .horizontal
+//        layout.minimumLineSpacing = 0
+//        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+//        collectionView.register(PageCell.self, forCellWithReuseIdentifier: "PageCell")
+//        collectionView.isPagingEnabled = true
+//        return collectionView
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupCustomTabBar()
-        setupPageCollectionView()
+        //setupPageCollectionView()
         
-        pageCollectionView.delegate = self
-        pageCollectionView.dataSource = self
+//        pageCollectionView.delegate = self
+//        pageCollectionView.dataSource = self
+        
+        //containerView에 추가
+        addChild(pageController)
+        self.containerView.addSubview(pageController.view)
+        pageController.didMove(toParent: self)
+        pageController.dele = self
+        
+        pageController.view.translatesAutoresizingMaskIntoConstraints = false
+        pageController.view.bottomAnchor.constraint(equalTo: self.containerView.bottomAnchor, constant: 0).isActive = true
+        pageController.view.topAnchor.constraint(equalTo: self.containerView.topAnchor).isActive = true
+        pageController.view.leftAnchor.constraint(equalTo: self.containerView.leftAnchor).isActive = true
+        pageController.view.rightAnchor.constraint(equalTo: self.containerView.rightAnchor).isActive = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,56 +66,61 @@ class TradingViewController: UIViewController, CustomMenuBarDelegate {
             $0.height.equalTo(55)
         }
     }
-    
-    private func setupPageCollectionView() {
-        self.view.addSubview(pageCollectionView)
-        pageCollectionView.snp.makeConstraints {
-            $0.top.equalTo(self.customTabBar.snp.bottom)
-            $0.left.equalTo(self.view.safeAreaLayoutGuide.snp.left)
-            $0.right.equalTo(self.view.safeAreaLayoutGuide.snp.right)
-            $0.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
-        }
+//
+//    private func setupPageCollectionView() {
+//        self.view.addSubview(pageCollectionView)
+//        pageCollectionView.snp.makeConstraints {
+//            $0.top.equalTo(self.customTabBar.snp.bottom)
+//            $0.left.equalTo(self.view.safeAreaLayoutGuide.snp.left)
+//            $0.right.equalTo(self.view.safeAreaLayoutGuide.snp.right)
+//            $0.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+//        }
+//    }
+//
+    func customMenuBar(scrollTo index: Int) {
+//        let indexPath = IndexPath(row: index, section: 0)
+//        self.pageController.
     }
     
-    func customMenuBar(scrollTo index: Int) {
+    func changePage(changeTo index: Int) {
         let indexPath = IndexPath(row: index, section: 0)
-        self.pageCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        
+        customTabBar.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
+        customTabBar.collectionView(customTabBar.collectionView, didSelectItemAt: indexPath)
     }
 
 }
 
 
-extension TradingViewController : UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PageCell", for: indexPath) as! PageCell
-        
-        cell.label.text = "\(indexPath.row + 1)번째 뷰"
-        return cell
-    }
-    
+//extension TradingViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 3
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PageCell", for: indexPath) as! PageCell
+//
+//        cell.label.text = "\(indexPath.row + 1)번째 뷰"
+//        return cell
+//    }
+//
 //    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 //        customTabBar.indicatorView.snp.remakeConstraints {
 //            $0.left.equalTo(self.view.snp.left).offset(scrollView.contentOffset.x / 3)
 //        }
 //    }
-    
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let itemAt = Int(targetContentOffset.pointee.x / self.view.frame.width)
-        let indexPath = IndexPath(item: itemAt, section: 0)
-        
-        customTabBar.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
-        customTabBar.collectionView(customTabBar.collectionView, didSelectItemAt: indexPath)
-    }
-}
 
-extension TradingViewController : UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: pageCollectionView.frame.width, height: pageCollectionView.frame.height)
-    }
-}
+//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//        let itemAt = Int(targetContentOffset.pointee.x / self.view.frame.width)
+//        let indexPath = IndexPath(item: itemAt, section: 0)
+//
+//        customTabBar.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
+//        customTabBar.collectionView(customTabBar.collectionView, didSelectItemAt: indexPath)
+//    }
+//}
+//
+//extension TradingViewController : UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: pageCollectionView.frame.width, height: pageCollectionView.frame.height)
+//    }
+//}
 

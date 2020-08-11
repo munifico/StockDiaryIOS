@@ -22,6 +22,10 @@
 		484A3FCC24DE8ECC00D3A34B /* CustomTabBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A3FCB24DE8ECC00D3A34B /* CustomTabBarCell.swift */; };
 		4874263924DEDC4100427226 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4874263824DEDC4100427226 /* CustomTabBar.swift */; };
 		4882E5CA24DFE6E800D9C18E /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882E5C924DFE6E800D9C18E /* PageCell.swift */; };
+		48A9AF8B24E18C51005DCA54 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9AF8A24E18C51005DCA54 /* PageController.swift */; };
+		48A9AF8D24E18DE6005DCA54 /* AllVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9AF8C24E18DE6005DCA54 /* AllVC.swift */; };
+		48A9AF8F24E18DF3005DCA54 /* DailyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9AF8E24E18DF3005DCA54 /* DailyVC.swift */; };
+		48A9AF9124E18DFD005DCA54 /* SupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9AF9024E18DFD005DCA54 /* SupportVC.swift */; };
 		DF9D0D7F12887A137DF3B8D5 /* Pods_StockDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73C85B3BF0CA52E3E93FD89 /* Pods_StockDiary.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +48,10 @@
 		484A3FCB24DE8ECC00D3A34B /* CustomTabBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarCell.swift; sourceTree = "<group>"; };
 		4874263824DEDC4100427226 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		4882E5C924DFE6E800D9C18E /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		48A9AF8A24E18C51005DCA54 /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
+		48A9AF8C24E18DE6005DCA54 /* AllVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVC.swift; sourceTree = "<group>"; };
+		48A9AF8E24E18DF3005DCA54 /* DailyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyVC.swift; sourceTree = "<group>"; };
+		48A9AF9024E18DFD005DCA54 /* SupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportVC.swift; sourceTree = "<group>"; };
 		62DF0892334199EDFC11C4FC /* Pods-StockDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockDiary.debug.xcconfig"; path = "Target Support Files/Pods-StockDiary/Pods-StockDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		F73C85B3BF0CA52E3E93FD89 /* Pods_StockDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,6 +117,7 @@
 		484A3FBE24DE7C9000D3A34B /* TradingRecord */ = {
 			isa = PBXGroup;
 			children = (
+				48A9AF8924E18C34005DCA54 /* View */,
 				484A3FBF24DE7D5E00D3A34B /* Trading.storyboard */,
 				484A3FC324DE7F3100D3A34B /* TradingViewController.swift */,
 			);
@@ -132,6 +141,17 @@
 				4882E5C924DFE6E800D9C18E /* PageCell.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		48A9AF8924E18C34005DCA54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48A9AF8A24E18C51005DCA54 /* PageController.swift */,
+				48A9AF8C24E18DE6005DCA54 /* AllVC.swift */,
+				48A9AF8E24E18DF3005DCA54 /* DailyVC.swift */,
+				48A9AF9024E18DFD005DCA54 /* SupportVC.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9C59D88B4177FF08AF6E486D /* Frameworks */ = {
@@ -261,11 +281,15 @@
 			files = (
 				484A3FCC24DE8ECC00D3A34B /* CustomTabBarCell.swift in Sources */,
 				484A3FC424DE7F3100D3A34B /* TradingViewController.swift in Sources */,
+				48A9AF8B24E18C51005DCA54 /* PageController.swift in Sources */,
 				484A3FB224DE7C5C00D3A34B /* StockDiary.xcdatamodeld in Sources */,
+				48A9AF8D24E18DE6005DCA54 /* AllVC.swift in Sources */,
 				484A3FAC24DE7C5C00D3A34B /* ViewController.swift in Sources */,
+				48A9AF9124E18DFD005DCA54 /* SupportVC.swift in Sources */,
 				4874263924DEDC4100427226 /* CustomTabBar.swift in Sources */,
 				484A3FC224DE7F0800D3A34B /* MainTabBarController.swift in Sources */,
 				4882E5CA24DFE6E800D9C18E /* PageCell.swift in Sources */,
+				48A9AF8F24E18DF3005DCA54 /* DailyVC.swift in Sources */,
 				484A3FC924DE83A400D3A34B /* MemoViewController.swift in Sources */,
 				484A3FA824DE7C5C00D3A34B /* AppDelegate.swift in Sources */,
 				484A3FAA24DE7C5C00D3A34B /* SceneDelegate.swift in Sources */,

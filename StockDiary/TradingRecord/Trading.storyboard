@@ -21,20 +21,102 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Oy-2Z-JLF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="tJC-yD-c7r" firstAttribute="bottom" secondItem="5Oy-2Z-JLF" secondAttribute="bottom" id="ETW-rk-lkF"/>
                             <constraint firstItem="fcA-pt-m2G" firstAttribute="centerX" secondItem="niz-LE-H2A" secondAttribute="centerX" id="Kwg-mK-0nk"/>
+                            <constraint firstItem="5Oy-2Z-JLF" firstAttribute="top" secondItem="tJC-yD-c7r" secondAttribute="top" id="V2o-WT-HWv"/>
+                            <constraint firstItem="5Oy-2Z-JLF" firstAttribute="leading" secondItem="tJC-yD-c7r" secondAttribute="leading" id="hzG-yD-hd2"/>
                             <constraint firstItem="fcA-pt-m2G" firstAttribute="centerY" secondItem="niz-LE-H2A" secondAttribute="centerY" id="jtu-1j-uLY"/>
+                            <constraint firstItem="tJC-yD-c7r" firstAttribute="trailing" secondItem="5Oy-2Z-JLF" secondAttribute="trailing" id="t7p-jm-Xze"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tJC-yD-c7r"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="history" id="g7a-UK-jcP"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="containerView" destination="5Oy-2Z-JLF" id="t91-du-hFV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AV5-me-DUh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="85" y="50"/>
+        </scene>
+        <!--AllVC-->
+        <scene sceneID="nHW-3i-vg6">
+            <objects>
+                <viewController storyboardIdentifier="AllVC" id="MtX-vg-e9D" customClass="AllVC" customModule="StockDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vXW-0o-ica">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yD-s0-gPI">
+                                <rect key="frame" x="186" y="405" width="14" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="O3K-qh-dUs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AoM-K4-hJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-473" y="843"/>
+        </scene>
+        <!--DailyVC-->
+        <scene sceneID="Jdj-5f-yhe">
+            <objects>
+                <viewController storyboardIdentifier="DailyVC" id="1sa-8Y-c1C" customClass="DailyVC" customModule="StockDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zqZ-gT-T6f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtW-4x-izS">
+                                <rect key="frame" x="186" y="438" width="17" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="fgB-hz-c1Q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4F0-al-bmu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="838"/>
+        </scene>
+        <!--SupportVC-->
+        <scene sceneID="tcn-7D-Xrc">
+            <objects>
+                <viewController storyboardIdentifier="SupportVC" id="1Va-zi-7y0" customClass="SupportVC" customModule="StockDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="anq-0C-y5Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDg-Ms-3Ua">
+                                <rect key="frame" x="186" y="438" width="18" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="hXu-e7-VjB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WF1-i7-yEd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="838"/>
         </scene>
     </scenes>
 </document>

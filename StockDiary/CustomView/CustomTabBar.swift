@@ -75,7 +75,6 @@ class CustomTabBar: UIView {
             $0.height.equalTo(3)
             $0.width.equalTo(UIScreen.main.bounds.size.width/3)
         }
-        print(self.frame.width)
     }
     
     public func setFirstTab() {
