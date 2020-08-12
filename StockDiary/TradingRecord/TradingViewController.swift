@@ -59,7 +59,7 @@ class TradingViewController: UIViewController, CustomMenuBarDelegate, PageContro
     
     func changePage(changeTo index: Int) {
         let indexPath = IndexPath(row: index, section: 0)
-        customTabBar.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
+        customTabBar.collectionView.selectItem(at: indexPath, animated: false, scrollPosition: [])
         customTabBar.collectionView(customTabBar.collectionView, didSelectItemAt: indexPath)
     }
 

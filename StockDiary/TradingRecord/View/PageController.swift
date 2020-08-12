@@ -53,7 +53,6 @@ extension PageController {
         guard let viewControllerIndex = VCArray.firstIndex(of: viewController) else { return nil }
         
         let previousIndex = viewControllerIndex - 1
-        dele?.changePage(changeTo: viewControllerIndex)
         
         if previousIndex < 0 {
             return nil
@@ -65,14 +64,25 @@ extension PageController {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = VCArray.firstIndex(of: viewController) else { return nil }
         
-        
         let nextIndex = viewControllerIndex + 1
-        dele?.changePage(changeTo: viewControllerIndex)
         
         if nextIndex >= VCArray.count {
             return nil
         } else {
             return VCArray[nextIndex]
+        }
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        
+        let currentVC = pageViewController.viewControllers![0]
+        
+        if currentVC is AllVC {
+            dele?.changePage(changeTo: 0)
+        } else if currentVC is DailyVC {
+            dele?.changePage(changeTo: 1)
+        } else if currentVC is SupportVC {
+            dele?.changePage(changeTo: 2)
         }
     }
     
