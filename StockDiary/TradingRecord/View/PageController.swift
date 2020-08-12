@@ -19,6 +19,7 @@ class PageController: UIPageViewController, UIPageViewControllerDelegate, UIPage
     
     var pendingPage: Int?
     let identifiers: NSArray = ["AllVC", "DailyVC", "SupportVC"]
+    var currentPageIndex: Int = 1
     
     lazy var VCArray: [UIViewController] = {
         return [self.VCInstance(name: "AllVC"),
@@ -76,10 +77,13 @@ extension PageController {
     }
     
     func toForward(changeTo index: Int) {
-        setViewControllers(VCArray, direction: .forward, animated: true, completion: nil)
+        if index > currentPageIndex {
+            setViewControllers([VCArray[index]], direction: .forward, animated: true, completion: nil)
+        } else {
+            setViewControllers([VCArray[index]], direction: .reverse, animated: true, completion: nil)
+        }
+        
+        currentPageIndex = index
     }
     
-    func toReverse(changeTo index: Int) {
-        setViewControllers(VCArray, direction: .reverse, animated: true, completion: nil)
-    }
 }

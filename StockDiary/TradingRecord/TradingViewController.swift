@@ -78,8 +78,7 @@ class TradingViewController: UIViewController, CustomMenuBarDelegate, PageContro
 //    }
 //
     func customMenuBar(scrollTo index: Int) {
-//        let indexPath = IndexPath(row: index, section: 0)
-//        self.pageController.
+        self.pageController.toForward(changeTo: index)
     }
     
     func changePage(changeTo index: Int) {
