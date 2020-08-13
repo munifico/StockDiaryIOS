@@ -1,5 +1,5 @@
 //
-//  DailyVC.swift
+//  AllVC.swift
 //  StockDiary
 //
 //  Created by 김상진 on 2020/08/10.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DailyVC: UIViewController {
+class SellController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,6 +15,8 @@ protocol CustomMenuBarDelegate: class {
 
 class CustomTabBar: UIView {
     
+    var titleNameList = ["매수", "매도", "종합"]
+    
     weak var delegate: CustomMenuBarDelegate?
     
     var indicatorView: UIView = {
@@ -99,6 +101,7 @@ extension CustomTabBar : UICollectionViewDataSource, UICollectionViewDelegate {
             else {
             return UICollectionViewCell()
         }
+        collectionCell.pageName.text = titleNameList[indexPath.row]
         
         return collectionCell
     }

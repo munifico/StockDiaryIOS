@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="85" y="50"/>
         </scene>
-        <!--AllVC-->
+        <!--Sell Controller-->
         <scene sceneID="nHW-3i-vg6">
             <objects>
-                <viewController storyboardIdentifier="AllVC" id="MtX-vg-e9D" customClass="AllVC" customModule="StockDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellController" id="MtX-vg-e9D" customClass="SellController" customModule="StockDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vXW-0o-ica">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="-473" y="843"/>
         </scene>
-        <!--DailyVC-->
+        <!--Buy Controller-->
         <scene sceneID="Jdj-5f-yhe">
             <objects>
-                <viewController storyboardIdentifier="DailyVC" id="1sa-8Y-c1C" customClass="DailyVC" customModule="StockDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BuyController" id="1sa-8Y-c1C" customClass="BuyController" customModule="StockDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zqZ-gT-T6f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="450" y="838"/>
         </scene>
-        <!--SupportVC-->
+        <!--Total Controller-->
         <scene sceneID="tcn-7D-Xrc">
             <objects>
-                <viewController storyboardIdentifier="SupportVC" id="1Va-zi-7y0" customClass="SupportVC" customModule="StockDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TotalController" id="1Va-zi-7y0" customClass="TotalController" customModule="StockDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="anq-0C-y5Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

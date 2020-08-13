@@ -18,13 +18,13 @@ class PageController: UIPageViewController, UIPageViewControllerDelegate, UIPage
     weak var dele: PageControllerDelegate?
     
     var pendingPage: Int?
-    let identifiers: NSArray = ["AllVC", "DailyVC", "SupportVC"]
+    let identifiers: NSArray = ["SellController", "BuyController", "TotalController"]
     var currentPageIndex: Int = 1
     
     lazy var VCArray: [UIViewController] = {
-        return [self.VCInstance(name: "AllVC"),
-                self.VCInstance(name: "DailyVC"),
-                self.VCInstance(name: "SupportVC")]
+        return [self.VCInstance(name: "SellController"),
+                self.VCInstance(name: "BuyController"),
+                self.VCInstance(name: "TotalController")]
     }()
     
     required init?(coder aDecoder: NSCoder) {
@@ -77,11 +77,11 @@ extension PageController {
         
         let currentVC = pageViewController.viewControllers![0]
         
-        if currentVC is AllVC {
+        if currentVC is SellController {
             dele?.changePage(changeTo: 0)
-        } else if currentVC is DailyVC {
+        } else if currentVC is BuyController {
             dele?.changePage(changeTo: 1)
-        } else if currentVC is SupportVC {
+        } else if currentVC is TotalController {
             dele?.changePage(changeTo: 2)
         }
     }
