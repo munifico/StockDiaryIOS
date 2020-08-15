@@ -7,5 +7,9 @@ target 'StockDiary' do
 
   # Pods for StockDiary
     pod 'SnapKit', '~> 5.0.0'
-
+    pod 'RxFlow'
+    pod 'RxSwift', '~> 5'
+    pod 'RxCocoa', '~> 5'
+    pod 'NSObject+Rx'
+    pod 'Action'
 end

@@ -16,13 +16,24 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ySY-sJ-LXD" kind="relationship" relationship="viewControllers" id="aZm-jZ-3If"/>
+                        <segue destination="7tl-LN-rIW" kind="relationship" relationship="viewControllers" id="urs-5h-KGF"/>
                         <segue destination="LPs-gg-c0y" kind="relationship" relationship="viewControllers" id="qkt-i7-qsn"/>
+                        <segue destination="ySY-sJ-LXD" kind="relationship" relationship="viewControllers" id="aZm-jZ-3If"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2pc-fW-A4n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-907" y="-612"/>
+        </scene>
+        <!--BuyRecordNav-->
+        <scene sceneID="IEo-cU-07H">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BuyRecord" referencedIdentifier="BuyRecordNav" id="7tl-LN-rIW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Cf0-1e-SYb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LFB-1u-797" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-69" y="-615"/>
         </scene>
         <!--MemoViewController-->
         <scene sceneID="yqt-cg-fA0">

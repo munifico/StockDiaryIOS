@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--매수내역 기록하기-->
+        <scene sceneID="lSK-yb-370">
+            <objects>
+                <viewController id="55E-3B-HeB" customClass="BuyComposeController" customModule="StockDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dwn-aH-vne">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ary-Ck-bJ9">
+                                <rect key="frame" x="20" y="128" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="xEV-dw-Tht"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ary-Ck-bJ9" firstAttribute="top" secondItem="sgU-9F-T4L" secondAttribute="top" constant="40" id="pDF-zb-q7E"/>
+                            <constraint firstItem="Ary-Ck-bJ9" firstAttribute="leading" secondItem="sgU-9F-T4L" secondAttribute="leading" constant="20" id="xAz-rB-JIw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sgU-9F-T4L"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="매수내역 기록하기" id="T1c-Ak-jSa">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8wP-e4-fIu"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="LJ2-qP-Jiq"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="8wP-e4-fIu" id="O75-cl-DlJ"/>
+                        <outlet property="saveButton" destination="LJ2-qP-Jiq" id="hvR-HO-0l9"/>
+                        <outlet property="stockNameTextField" destination="Ary-Ck-bJ9" id="yP1-x1-eW1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ubu-yA-i5t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.75362318840587" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wah-Ru-86j">
+            <objects>
+                <navigationController storyboardIdentifier="BuyComposeNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MVU-ws-qsN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8YN-49-jG9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="55E-3B-HeB" kind="relationship" relationship="rootViewController" id="J2x-ST-Jyu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0PL-MH-rLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82.608695652173921" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
